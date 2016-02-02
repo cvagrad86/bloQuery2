@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		935BAAB91C612727000075BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BAAB81C612727000075BA /* AppDelegate.swift */; };
+		935BAABB1C612727000075BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BAABA1C612727000075BA /* ViewController.swift */; };
+		935BAABE1C612727000075BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935BAABC1C612727000075BA /* Main.storyboard */; };
+		935BAAC11C612727000075BA /* BloQuery2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 935BAABF1C612727000075BA /* BloQuery2.xcdatamodeld */; };
+		935BAAC31C612727000075BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935BAAC21C612727000075BA /* Assets.xcassets */; };
+		935BAAC61C612727000075BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935BAAC41C612727000075BA /* LaunchScreen.storyboard */; };
+		935BAAD11C612728000075BA /* BloQuery2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BAAD01C612728000075BA /* BloQuery2Tests.swift */; };
+		935BAADC1C612728000075BA /* BloQuery2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BAADB1C612728000075BA /* BloQuery2UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		935BAACD1C612728000075BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 935BAAAD1C612726000075BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 935BAAB41C612727000075BA;
+			remoteInfo = BloQuery2;
+		};
+		935BAAD81C612728000075BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 935BAAAD1C612726000075BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 935BAAB41C612727000075BA;
+			remoteInfo = BloQuery2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		935BAAB51C612727000075BA /* BloQuery2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloQuery2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		935BAAB81C612727000075BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		935BAABA1C612727000075BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		935BAABD1C612727000075BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		935BAAC01C612727000075BA /* BloQuery2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BloQuery2.xcdatamodel; sourceTree = "<group>"; };
+		935BAAC21C612727000075BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		935BAAC51C612727000075BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		935BAAC71C612727000075BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935BAACC1C612728000075BA /* BloQuery2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloQuery2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		935BAAD01C612728000075BA /* BloQuery2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloQuery2Tests.swift; sourceTree = "<group>"; };
+		935BAAD21C612728000075BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935BAAD71C612728000075BA /* BloQuery2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloQuery2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		935BAADB1C612728000075BA /* BloQuery2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloQuery2UITests.swift; sourceTree = "<group>"; };
+		935BAADD1C612728000075BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		935BAAB21C612727000075BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAAC91C612728000075BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAAD41C612728000075BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		935BAAAC1C612726000075BA = {
+			isa = PBXGroup;
+			children = (
+				935BAAB71C612727000075BA /* BloQuery2 */,
+				935BAACF1C612728000075BA /* BloQuery2Tests */,
+				935BAADA1C612728000075BA /* BloQuery2UITests */,
+				935BAAB61C612727000075BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		935BAAB61C612727000075BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				935BAAB51C612727000075BA /* BloQuery2.app */,
+				935BAACC1C612728000075BA /* BloQuery2Tests.xctest */,
+				935BAAD71C612728000075BA /* BloQuery2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		935BAAB71C612727000075BA /* BloQuery2 */ = {
+			isa = PBXGroup;
+			children = (
+				935BAAB81C612727000075BA /* AppDelegate.swift */,
+				935BAABA1C612727000075BA /* ViewController.swift */,
+				935BAABC1C612727000075BA /* Main.storyboard */,
+				935BAAC21C612727000075BA /* Assets.xcassets */,
+				935BAAC41C612727000075BA /* LaunchScreen.storyboard */,
+				935BAAC71C612727000075BA /* Info.plist */,
+				935BAABF1C612727000075BA /* BloQuery2.xcdatamodeld */,
+			);
+			path = BloQuery2;
+			sourceTree = "<group>";
+		};
+		935BAACF1C612728000075BA /* BloQuery2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				935BAAD01C612728000075BA /* BloQuery2Tests.swift */,
+				935BAAD21C612728000075BA /* Info.plist */,
+			);
+			path = BloQuery2Tests;
+			sourceTree = "<group>";
+		};
+		935BAADA1C612728000075BA /* BloQuery2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				935BAADB1C612728000075BA /* BloQuery2UITests.swift */,
+				935BAADD1C612728000075BA /* Info.plist */,
+			);
+			path = BloQuery2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		935BAAB41C612727000075BA /* BloQuery2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 935BAAE01C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2" */;
+			buildPhases = (
+				935BAAB11C612727000075BA /* Sources */,
+				935BAAB21C612727000075BA /* Frameworks */,
+				935BAAB31C612727000075BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BloQuery2;
+			productName = BloQuery2;
+			productReference = 935BAAB51C612727000075BA /* BloQuery2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		935BAACB1C612728000075BA /* BloQuery2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 935BAAE31C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2Tests" */;
+			buildPhases = (
+				935BAAC81C612728000075BA /* Sources */,
+				935BAAC91C612728000075BA /* Frameworks */,
+				935BAACA1C612728000075BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				935BAACE1C612728000075BA /* PBXTargetDependency */,
+			);
+			name = BloQuery2Tests;
+			productName = BloQuery2Tests;
+			productReference = 935BAACC1C612728000075BA /* BloQuery2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		935BAAD61C612728000075BA /* BloQuery2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 935BAAE61C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2UITests" */;
+			buildPhases = (
+				935BAAD31C612728000075BA /* Sources */,
+				935BAAD41C612728000075BA /* Frameworks */,
+				935BAAD51C612728000075BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				935BAAD91C612728000075BA /* PBXTargetDependency */,
+			);
+			name = BloQuery2UITests;
+			productName = BloQuery2UITests;
+			productReference = 935BAAD71C612728000075BA /* BloQuery2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		935BAAAD1C612726000075BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Eric Chamberlin";
+				TargetAttributes = {
+					935BAAB41C612727000075BA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					935BAACB1C612728000075BA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 935BAAB41C612727000075BA;
+					};
+					935BAAD61C612728000075BA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 935BAAB41C612727000075BA;
+					};
+				};
+			};
+			buildConfigurationList = 935BAAB01C612727000075BA /* Build configuration list for PBXProject "BloQuery2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 935BAAAC1C612726000075BA;
+			productRefGroup = 935BAAB61C612727000075BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				935BAAB41C612727000075BA /* BloQuery2 */,
+				935BAACB1C612728000075BA /* BloQuery2Tests */,
+				935BAAD61C612728000075BA /* BloQuery2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		935BAAB31C612727000075BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935BAAC61C612727000075BA /* LaunchScreen.storyboard in Resources */,
+				935BAAC31C612727000075BA /* Assets.xcassets in Resources */,
+				935BAABE1C612727000075BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAACA1C612728000075BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAAD51C612728000075BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		935BAAB11C612727000075BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935BAABB1C612727000075BA /* ViewController.swift in Sources */,
+				935BAAC11C612727000075BA /* BloQuery2.xcdatamodeld in Sources */,
+				935BAAB91C612727000075BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAAC81C612728000075BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935BAAD11C612728000075BA /* BloQuery2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935BAAD31C612728000075BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935BAADC1C612728000075BA /* BloQuery2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		935BAACE1C612728000075BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 935BAAB41C612727000075BA /* BloQuery2 */;
+			targetProxy = 935BAACD1C612728000075BA /* PBXContainerItemProxy */;
+		};
+		935BAAD91C612728000075BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 935BAAB41C612727000075BA /* BloQuery2 */;
+			targetProxy = 935BAAD81C612728000075BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		935BAABC1C612727000075BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935BAABD1C612727000075BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		935BAAC41C612727000075BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935BAAC51C612727000075BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		935BAADE1C612728000075BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		935BAADF1C612728000075BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		935BAAE11C612728000075BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BloQuery2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		935BAAE21C612728000075BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BloQuery2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		935BAAE41C612728000075BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BloQuery2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloQuery2.app/BloQuery2";
+			};
+			name = Debug;
+		};
+		935BAAE51C612728000075BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BloQuery2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloQuery2.app/BloQuery2";
+			};
+			name = Release;
+		};
+		935BAAE71C612728000075BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BloQuery2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BloQuery2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		935BAAE81C612728000075BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BloQuery2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericchamberlin.bloQuery2.BloQuery2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BloQuery2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		935BAAB01C612727000075BA /* Build configuration list for PBXProject "BloQuery2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				935BAADE1C612728000075BA /* Debug */,
+				935BAADF1C612728000075BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		935BAAE01C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				935BAAE11C612728000075BA /* Debug */,
+				935BAAE21C612728000075BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		935BAAE31C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				935BAAE41C612728000075BA /* Debug */,
+				935BAAE51C612728000075BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		935BAAE61C612728000075BA /* Build configuration list for PBXNativeTarget "BloQuery2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				935BAAE71C612728000075BA /* Debug */,
+				935BAAE81C612728000075BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		935BAABF1C612727000075BA /* BloQuery2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				935BAAC01C612727000075BA /* BloQuery2.xcdatamodel */,
+			);
+			currentVersion = 935BAAC01C612727000075BA /* BloQuery2.xcdatamodel */;
+			path = BloQuery2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 935BAAAD1C612726000075BA /* Project object */;
+}
