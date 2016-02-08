@@ -11,14 +11,25 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    let APP_ID = "6CE26A7C-28A7-7DD3-FF92-F48560B7F900"
+    let SECRET_KEY = "AD2D1457-05B1-2226-FFC1-20ADBEC8F400"
+    let VERSION_NUM = "v1"
+    
+    var backendless = Backendless.sharedInstance()
+    
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        
+        
+        // If you plan to use Backendless Media Service, uncomment the following line (iOS ONLY!)
+        // backendless.mediaService = MediaService()
         return true
     }
+}
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -37,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+/*
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
@@ -46,19 +57,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var applicationDocumentsDirectory: NSURL = {
+    var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ericchamberlin.bloQuery2.BloQuery2" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
-
-    lazy var managedObjectModel: NSManagedObjectModel = {
+ var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
         let modelURL = NSBundle.mainBundle().URLForResource("BloQuery2", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+     var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
@@ -83,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return coordinator
     }()
 
-    lazy var managedObjectContext: NSManagedObjectContext = {
+     var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
         let coordinator = self.persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
@@ -107,5 +117,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-}
+*/
+
 
