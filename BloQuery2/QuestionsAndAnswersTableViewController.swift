@@ -11,6 +11,20 @@ import Foundation
 
 class QuestionsAndAnswersTableViewController: UITableViewController {
 
+    @IBOutlet weak var currentQuestionLabel: UILabel!
     var currentObject = [Question].self
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //currentQuestionLabel.text = currentObject.
+        
+        print("\(currentObject)")
+        
+    }
+    @IBAction func addAnswer(sender: AnyObject) {
+        
+        //click to add an answer
+        
+    }
 }

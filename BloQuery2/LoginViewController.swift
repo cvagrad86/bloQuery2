@@ -16,13 +16,13 @@ class LoginViewController: UIViewController {
     
     var backendless = Backendless.sharedInstance()
     
-    func setStayLoggedIn(value: Bool) -> Bool
-    {
+    //func setStayLoggedIn(value: Bool) -> Bool
+   // {
         //let backendless = Backendless.sharedInstance()
-        backendless.userService.setStayLoggedIn( true )
+        //backendless.userService.setStayLoggedIn( true )
         
-        return true
-    }
+       // return true
+    //}
     
     @IBAction func userLogin(sender: AnyObject) {
         
@@ -35,6 +35,9 @@ class LoginViewController: UIViewController {
             
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
             self.presentViewController(viewController, animated: true, completion: nil)
+            
+            self.backendless.userService.setStayLoggedIn( true )
+            
             /*
             // - user update
             var counter: AnyObject! = user.getProperty("counter")

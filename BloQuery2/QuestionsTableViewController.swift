@@ -80,10 +80,27 @@ class QuestionsTableViewController: UITableViewController {
         return cell
     }
 
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let nav = segue.destinationViewController as! UINavigationController
+        
+        let controller = nav.topViewController as! QuestionsAndAnswersTableViewController
+        
+        if segue.identifier == "showQuestions" {
+            
+            let indexPath = tableView.indexPathForSelectedRow
+            
+            //controller.currentObject =
+        }
+        
+    }
+*/
+
         }
 
-        
-    
+
+
 
     /*
     func saveNewPost () {

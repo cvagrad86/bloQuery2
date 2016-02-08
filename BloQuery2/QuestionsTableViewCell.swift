@@ -11,6 +11,5 @@ import UIKit
 class QuestionsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
-    
     @IBOutlet weak var userNameLabel: UILabel!
 }

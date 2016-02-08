@@ -17,6 +17,8 @@ class Question: NSObject {
     var created : NSDate?
     var owner:BackendlessUser?
     
+    
+    
     }
     
     
