@@ -11,17 +11,45 @@ import Foundation
 
 class QuestionsAndAnswersTableViewController: UITableViewController {
 
+    let backendless = Backendless.sharedInstance()
+    
     @IBOutlet weak var currentQuestionLabel: UILabel!
-    var currentObject = [Question].self
+    var currentObject:Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //currentQuestionLabel.text = currentObject.
-        
-        print("\(currentObject)")
+       
+            //currentQuestionLabel.text = (currentObject!.question! as String)
+      
+        //print("\(currentObject)")
         
     }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+        // return allQuestions.count
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("answerCell",
+            forIndexPath: indexPath) as! AnswersTableViewCell
+        
+        
+        
+
+        
+        
+        return cell
+        
+    }
+    
+    
+    
     @IBAction func addAnswer(sender: AnyObject) {
         
         //click to add an answer

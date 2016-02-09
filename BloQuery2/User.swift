@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-class User: NSObject {
+class Users: NSObject {
     
     var name : String?
     var email : String?
     var owner:BackendlessUser?
     var objectId: String?
-    
+    var password: String?
     
     
 }

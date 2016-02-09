@@ -30,28 +30,64 @@ class AddQuestionViewController: UIViewController {
     
     @IBAction func addQuestion(sender: UIButton) {
         
-        backendless.setThrowException(false)
+        let newQuestion = Question()
+        let currentUser = backendless.userService.currentUser
         
-        var result : AnyObject?
-        var fault : Fault?
+       newQuestion.question = userQuestion.text
+        newQuestion.userName = currentUser.name
         
-        result = backendless.persistenceService.save(Question())
-        if (result is Question) {
-            let obj : AnyObject = backendless.persistenceService.findByObject(Question)
-            if (obj is Question) {
-                let obj1 = obj as! Question
-                print("\nQuestion (1): \(obj1.description)")
-                userQuestion.text = obj1.question
-                
+        
+        let dataStore = backendless.data.of(Question.ofClass())
+        
+        // save object synchronously
+        var error: Fault?
+        let result = dataStore.save(newQuestion, fault: &error) as? Question
+        if error == nil {
+            
+            print("Question has been saved: \(result!.question)")
+            
+        }
+        else {
+            print("Server reported an error: \(error)")
+        }
+}
+}
+
+
+/*
+        func saveNewContact() {
+            
+            let newQuestion = Question()
+           
+            
+            let dataStore = backendless.data.of(Question.ofClass())
+            
+            // save object synchronously
+            var error: Fault?
+            let result = dataStore.save(newQuestion, fault: &error) as? Question
+            if error == nil {
+                print("Contact has been saved: \(result!.objectId)")
             }
+            else {
+                print("Server reported an error: \(error)")
+            }
+            
+            // save object asynchronously
+            dataStore.save(
+                contact,
+                response: { (result: AnyObject!) -> Void in
+                    let obj = result as! Contact
+                    print("Contact has been saved: \(obj.objectId)")
+                },
+                error: { (fault: Fault!) -> Void in
+                    print("fServer reported an error: \(fault)")
+            })
         }
-        if (result is Fault) {
-            print("Something went wrong")
-        }
+
 
         
         
     }
+*/
 
-}
 

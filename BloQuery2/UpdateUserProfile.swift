@@ -16,40 +16,43 @@ class UpdateUserProfile: UIViewController {
     
     @IBOutlet weak var newUserName: UITextField!
 
-    @IBOutlet weak var newEmail: UITextField?
+    @IBOutlet weak var passWord: UITextField!
+    @IBOutlet weak var newEmail: UITextField!
+    
+    //func update(_ user: BackendlessUser! ) -> BackendlessUser!
+    
     @IBAction func saveChanges(sender: AnyObject) {
         
-        // - shut off the fault as exception
-        backendless.setThrowException(false)
+            Types.tryblock({ () -> Void in
+                
+                let user = BackendlessUser()
+               
+                
+                let registeredUser = self.backendless.userService.registering(user)
+                print("User has been registered (SYNC): \(registeredUser)")
+                
+                let properties = [
+                   "name" : self.passWord.text! as String,
+                   "email" : self.newUserName.text! as String,
+                   "password" : self.newEmail.text! as String
+                ]
+                
+                registeredUser.updateProperties( properties )
+                let updatedUser = self.backendless.userService.update(user)
+                print("User updated (SYNC): \(updatedUser)")
+                
+                },
+                
+                catchblock: { (exception) -> Void in
+                    print("Server reported an error: \(exception)" )
+            })
         
-        //var result : AnyObject
-        var fault : Fault?
-        
-        // - sync method with fault as reference (fault as exception should be shutted off !)
-        let item : AnyObject? = backendless.persistenceService.save(User (), error: &fault)
-        if (fault == nil) {
-            let obj : AnyObject = backendless.persistenceService.save(User)
-            if (obj is User) {
-                //print("OrderItem: \((obj as! User).itemName) <\((obj as! User).objectId)>")
-                newUserName.text = obj.name as String
-                //newEmail.text = User.email as String
             }
-            else {
-                print("\nFAULT (0): \(fault!.description)")
-            }
-        }
-        else {
-            print("\nFAULT (0): \(fault!.description)")
-        }
-    }
     
    
     @IBAction func resetPassword(sender: AnyObject) {
         
         backendless.userService.restorePassword("password")
-        
-        
-        
         
     }
     

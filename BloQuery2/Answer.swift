@@ -9,11 +9,12 @@
 import UIKit
 import Foundation
 
-class Answer: NSObject {
+class Answers: NSObject {
     
     var answer : String?
     var created : NSDate?
     var owner : Question?
     var objectId: String?
+    var vote: Int?
     
 }
