@@ -16,7 +16,7 @@ class ViewAllUsers: UITableViewController  {
     @IBOutlet var allUsersTableView: UITableView!
     
     var backendless = Backendless.sharedInstance()
-    var listOfUsers:[Users] = []
+    var listOfUsers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,8 @@ func fetchingUsersSync() {
         
         let dataStore = self.backendless.persistenceService.of(BackendlessUser.ofClass())
         let users = dataStore.find()
-        print("Users have been fetched (SYNC): \(users)")
         
+        print("Users have been fetched (SYNC): \(users)")
         
         
         },

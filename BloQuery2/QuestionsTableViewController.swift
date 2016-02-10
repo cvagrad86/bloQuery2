@@ -11,16 +11,46 @@ import UIKit
 
 class QuestionsTableViewController: UITableViewController {
 
-    
     let backendless = Backendless.sharedInstance()
-    //let allQuestions = [BackendlessDataQuery]()
+    var showAllQuestions = [String]()
+    //var showAllQuestions = [String:AnyObject] = [Question]() as [String:AnyObject]
     var currentQuestion = [Question]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //fetchingFirstPageAsync()
-    }
+        Types.tryblock({ () -> Void in
+            
+            let startTime = NSDate()
+            let query = BackendlessDataQuery()
+            var allQuestions = self.backendless.persistenceService.of(Question.ofClass()).find(query)
+            print("Total Questions in the Backendless starage - \(allQuestions.totalObjects)")
+            //self.showAllQuestions.appendContentsOf
+            
+            let bc1 : BackendlessCollection = allQuestions as BackendlessCollection
+            for order : Question in bc1.data as! [Question] {
+                
+                
+            }
+            var size = allQuestions.getCurrentPage().count
+            while size > 0 {
+                print("Loaded \(allQuestions) questions in the current page")
+                allQuestions = allQuestions.nextPage()
+                size = allQuestions.getCurrentPage().count
+            
+            }
+            
+            
+            
+            },
+            
+            catchblock: { (exception) -> Void in
+                print("Server reported an error: \(exception as! Fault)")
+            }
+        )
+            }
+    
+    //fetchingFirstPageAsync()
     /*
     func fetchingFirstPageAsync() {
         
@@ -45,110 +75,78 @@ class QuestionsTableViewController: UITableViewController {
         })
     }
 */
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
+
+    }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-       // return allQuestions.count
+        
+       return showAllQuestions.count
+        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("questionCell",
             forIndexPath: indexPath) as! QuestionsTableViewCell
         
+        //let onequestion = showAllQuestions[indexPath.row]
+        //cell.userNameLabel.text = onequestion.userName as? String
+        //cell.questionLabel?.text = onequestion.question as String?
         
-        Types.tryblock({ () -> Void in
-            
-            let startTime = NSDate()
-            
-            let query = BackendlessDataQuery()
-            
-            var allQuestions = self.backendless.persistenceService.of(Question.ofClass()).find(query)
-            print("Total restaurants in the Backendless starage - \(allQuestions.totalObjects)")
-            
-            let bc1 : BackendlessCollection = allQuestions as BackendlessCollection
-            for order : Question in bc1.data as! [Question] {
-                
-                cell.questionLabel.text = order.question
-                cell.userNameLabel.text = order.userName
-                
-            }
-            var size = allQuestions.getCurrentPage().count
-            while size > 0 {
-                print("Loaded \(size) restaurant in the current page")
-                allQuestions = allQuestions.nextPage()
-                size = allQuestions.getCurrentPage().count
-                
-                
-                
-            }
-            
-            print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
-            },
-            
-            catchblock: { (exception) -> Void in
-                print("Server reported an error: \(exception as! Fault)")
-            }
-        )
-        /* works, but still only brings the first question created
-        let startTime = NSDate()
+        //let blocQuery:BloQuery2 = showAllQuestions[indexPath.row] as BloQuery2
+        //let onequestion:Question = blocQuery.Question as Question
+        //cell.userNameLabel.text = onequestion.userName! as String
+        //cell.questionLabel?.text = onequestion.question! as String
         
-        backendless.persistenceService.of(Question.ofClass()).find(
-            BackendlessDataQuery(),
-            response: { (let questions  : BackendlessCollection!) -> () in
-                let currentPage = questions.getCurrentPage()
-                
-                print("Loaded \(currentPage.count) questions")
-                
-                for question in currentPage {
-                    let rest : Question = question as! Question
-                    cell.userNameLabel.text = rest.userName
-                    cell.questionLabel.text = rest.question
-                }
-                
-                print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
-            },
-            error: { (let fault : Fault!) -> () in
-                print("Server reported an error: \(fault)")
-        })
-        */
-
+        cell.userNameLabel.text = showAllQuestions[indexPath.row] as! String
+        cell.questionLabel?.text = showAllQuestions[indexPath.row] as! String
+        
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("showQuestions", sender: self)
+//        self.performSegueWithIdentifier("showQuestions", sender: self)
     }
+
     
     
     /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "showQuestions" {
-            if let destination = segue.destinationViewController as? QuestionsAndAnswersTableViewController {
-                if blogIndex = tableView.indexPathForSelectedRow!.row {
-                    destination.currentObject = Question[blogIndex]
-                }
+    
         
         if segue.identifier == "showQuestions" {
             
-            let nav = segue.destinationViewController as! UINavigationController
+            if let nav = segue.destinationViewController as? QuestionsAndAnswersTableViewController {
+                
+                let indexPath = tableView.indexPathForSelectedRow
+                //
+                //            controller.currentObject = currentQuestion[(indexPath?.row)!]
+                nav.currentObject = cow.name
+            }
             
-            //segue.destinationViewController.isKindOfClass(UINavigationController)
+//            //segue.destinationViewController.isKindOfClass(UINavigationController)
+//            
+//            let controller = nav.topViewController as! QuestionsAndAnswersTableViewController
+//            
+//            let indexPath = tableView.indexPathForSelectedRow
+//            
+//            controller.currentObject = currentQuestion[(indexPath?.row)!]
             
-            let controller = nav.topViewController as! QuestionsAndAnswersTableViewController
-            let indexPath = tableView.indexPathForSelectedRow
             
-            controller.currentObject = currentQuestion[(indexPath?.row)!]
 
         }
         
     }
 
-
-        }
+}
 
 */
 
@@ -213,6 +211,30 @@ class QuestionsTableViewController: UITableViewController {
     if (result is Fault) {
     print("something went wrong")
     }
+    
+    /* works, but still only brings the first question created
+    let startTime = NSDate()
+    
+    backendless.persistenceService.of(Question.ofClass()).find(
+    BackendlessDataQuery(),
+    response: { (let questions  : BackendlessCollection!) -> () in
+    let currentPage = questions.getCurrentPage()
+    
+    print("Loaded \(currentPage.count) questions")
+    
+    for question in currentPage {
+    let rest : Question = question as! Question
+    cell.userNameLabel.text = rest.userName
+    cell.questionLabel.text = rest.question
+    }
+    
+    print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
+    },
+    error: { (let fault : Fault!) -> () in
+    print("Server reported an error: \(fault)")
+    })
+    */
+
     */
     
     
@@ -220,7 +242,7 @@ class QuestionsTableViewController: UITableViewController {
     
    
     
-    
-
-    
 }
+
+
+

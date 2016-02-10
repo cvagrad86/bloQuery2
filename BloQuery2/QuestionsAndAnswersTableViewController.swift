@@ -53,6 +53,7 @@ class QuestionsAndAnswersTableViewController: UITableViewController {
     @IBAction func addAnswer(sender: AnyObject) {
         
         //click to add an answer
+        print("add answer button pressed")
         
     }
 }

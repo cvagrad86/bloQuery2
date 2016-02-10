@@ -28,8 +28,8 @@ class UpdateUserProfile: UIViewController {
                 let user = BackendlessUser()
                
                 
-                let registeredUser = self.backendless.userService.registering(user)
-                print("User has been registered (SYNC): \(registeredUser)")
+                let registeredUser = self.backendless.userService.currentUser
+                //print("User has been registered (SYNC): \(registeredUser)")
                 
                 let properties = [
                    "name" : self.passWord.text! as String,
